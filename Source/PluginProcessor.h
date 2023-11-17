@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include <Fifo.h>
 
 //==============================================================================
 /**
@@ -65,7 +66,7 @@ public:
         END_OF_LIST
     };
     
-    using DSP_Order = std::array<DSP_Option, static_cast<size_t>(DSP_Option::END_OF_LIST)>;
+    using DSP_Order = std::array<DSP_Option, static_cast<size_t>(DSP_Option::END_OF_LIST)>; SimpleMBComp::Fifo<DSP_Order> dspOrderFifo;
     
     using DSP_Pointers = std::array<juce::dsp::ProcessorBase*, static_cast<size_t>(DSP_Option::END_OF_LIST)>;
 
