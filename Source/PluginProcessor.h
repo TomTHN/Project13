@@ -76,6 +76,12 @@ public:
     
     using DSP_Pointers = std::array<juce::dsp::ProcessorBase*, static_cast<size_t>(DSP_Option::END_OF_LIST)>;
 
+    juce::AudioParameterFloat* phaserRateHz = nullptr;
+    juce::AudioParameterFloat* phaserCenterFreqHz = nullptr;
+    juce::AudioParameterFloat* phaserDepthPercent = nullptr;
+    juce::AudioParameterFloat* phaserFeedbackPercent = nullptr;
+    juce::AudioParameterFloat* phaserMixPercent = nullptr;
+    
 private:
     //==============================================================================
     
